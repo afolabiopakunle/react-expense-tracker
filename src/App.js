@@ -31,8 +31,7 @@ function App() {
     // const expenses = ;
 
     const updateExpenses = (data) => {
-        setExpenses([...expenses, data])
-        console.log("APP.JS",expenses)
+        setExpenses((prevState) => [data, ...prevState])
     }
 
   return (
