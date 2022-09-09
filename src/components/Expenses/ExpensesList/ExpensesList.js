@@ -4,7 +4,7 @@ import './ExpensesList.css';
 
 function ExpensesList(props) {
 
-    let displayExpenses = <p className='white'>No expenses found</p>
+    let displayExpenses = <h2 className='expenses-list__fallback'>Found No Expenses</h2>
     const filteredExpenses = props.expenses.filter(expense => expense.date.getFullYear().toString() === props.year )
     if(filteredExpenses.length > 0) {
         displayExpenses = filteredExpenses.map((expense) => (

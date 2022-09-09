@@ -29,7 +29,8 @@ function NewExpenseForm(props) {
         setExpenseAmount('');
         setExpenseTitle('');
         setExpenseDate('');
-        props.onFormSubmit(formData)
+        props.onFormSubmit(formData);
+        props.onToggleShowForm();
     }
 
     return (
@@ -49,6 +50,7 @@ function NewExpenseForm(props) {
                 </div>
             </div>
             <div className="new-expense__actions">
+                <button onClick={props.onToggleShowForm}>Cancel</button>
                 <button type='submit'>Add Expense</button>
             </div>
         </form>
